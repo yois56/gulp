@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;700;900&display=swap");
+/* Reset */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*, *::before, *::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Noto Sans KR", Sans-serif;
+	font-style: normal;
+	line-height: 1.4;
+	color: #333;
+	letter-spacing: -1px;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input, select, textarea {
+	vertical-align: middle;
+	line-height: normal;
+	color: inherit;
+	font: inherit;
+}
+
+input[readonly], input[disabled],
+button[disabled],
+.disabled {
+	cursor: default;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input::-ms-clear, input::-ms-reveal {
+	display: none;
+}
+
+input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+input::-webkit-clear-button, input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+	display: none;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+input::-webkit-datetime-edit-fields-wrapper {
+	padding: 0;
+}
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: .5;
+}
+
+::-moz-placeholder {
+	color: inherit;
+	opacity: .5;
+}
+
+:-ms-input-placeholder {
+	color: inherit;
+	opacity: .5;
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+	overflow: visible;
+	border: 0;
+	border-radius: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+
+em, address {
+	font-style: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+caption {
+	height: 0;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+
+legend {
+	position: absolute;
+	height: 0;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+
+hr {
+	margin: 0;
+	border: 0;
+}
+
+main {
+	display: block;
+}
+
+/* accessibility */
+#skipnav a {
+	display: block;
+	position: absolute;
+	z-index: 99999;
+	top: 0;
+	left: -9999px;
+	width: 100%;
+	padding: 10px 0;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	color: #fff;
+}
+
+#skipnav a:focus {
+	left: 0;
+}
+
+.blind {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0);
+}
+
+.focusring {
+	outline: 1px dotted #7f7f7f;
+	outline: -webkit-focus-ring-color auto 1px;
+}
+
+/* display */
+.dnone {
+	display: none !important;
+}
+
+.dblock {
+	display: block !important;
+}
+
+.dinline {
+	display: inline-block !important;
+}
+
+/* margin & padding */
+.mg0 {
+	margin: 0 !important;
+}
+
+.mgt0 {
+	margin-top: 0 !important;
+}
+
+.mgr0 {
+	margin-right: 0 !important;
+}
+
+.mgb0 {
+	margin-bottom: 0 !important;
+}
+
+.mgl0 {
+	margin-left: 0 !important;
+}
+
+.pd0 {
+	padding: 0 !important;
+}
+
+.pdt0 {
+	padding-top: 0 !important;
+}
+
+/* font */
+.fw-normal {
+	font-weight: 400 !important;
+}
+
+.fw-light {
+	font-weight: 300 !important;
+}
+
+.fw-medium {
+	font-weight: 500 !important;
+}
+
+.fw-bold {
+	font-weight: 700 !important;
+}
+
+.fs-normal {
+	font-size: 1rem !important;
+}
+
+.fs-x-small {
+	font-size: 0.75rem !important;
+}
+
+.fs-small {
+	font-size: 0.875rem !important;
+}
+
+.fs-large {
+	font-size: 1.125rem !important;
+}
+
+.fs-x-large {
+	font-size: 1.25rem !important;
+}
+
+.underline {
+	text-decoration: underline !important;
+}
+
+/* color */
+.fc-normal {
+	color: #333 !important;
+}
+
+/* float */
+.fleft {
+	float: left !important;
+}
+
+.fright {
+	float: right !important;
+}
+
+.fnone {
+	float: none !important;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+}
+
+/* align */
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.top {
+	vertical-align: top !important;
+}
+
+.middle {
+	vertical-align: middle !important;
+}
+
+.bottom {
+	vertical-align: bottom !important;
+}
+
+/* background & border */
+.bgnone {
+	background: none !important;
+}
+
+.bdnone {
+	border: none !important;
+}
+
+.btnone {
+	border-top: none !important;
+}
+
+.bbnone {
+	border-bottom: none !important;
+}
+
+.blnone {
+	border-left: none !important;
+}
+
+.brnone {
+	border-right: none !important;
+}
+
+/* scroll */
+.scroll {
+	overflow: auto;
+}
+
+.scroll-y {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.scroll-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+/* ellipsis */
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+/* Layout Style */
+#header {
+	padding: 1rem;
+	background: #5d99c6;
+	color: #fff;
+}
+
+#contents {
+	padding: 1rem 1rem 10rem;
+	background: #f9f9f9;
+}
+
+#footer {
+	padding: 1rem;
+	background: #90caf9;
+	color: #fff;
+}
+
+/* icon */
+.ico-gulp-img, .ico-gulp-bg {
+	width: 4rem;
+	height: 4rem;
+}
+
+.ico-gulp-bg {
+	display: inline-block;
+	background: url("/assets/images/@gulp.png") no-repeat 0 0;
+	background-size: 100%;
+	-webkit-animation: animate-gulp 1s linear infinite alternate;
+	        animation: animate-gulp 1s linear infinite alternate;
+}
+
+@-webkit-keyframes animate-gulp {
+	0% {
+		opacity: .6;
+		-webkit-filter: blur(2px);
+		        filter: blur(2px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		        filter: blur(0);
+	}
+}
+
+@keyframes animate-gulp {
+	0% {
+		opacity: .6;
+		-webkit-filter: blur(2px);
+		        filter: blur(2px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		        filter: blur(0);
+	}
+}
+
+/* button */
+button.clickme {
+	padding: 0.25rem 1rem;
+	background: #cf4647;
+	border-radius: 1rem;
+	color: #fff;
+}
