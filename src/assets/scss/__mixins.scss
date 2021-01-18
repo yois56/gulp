@@ -1,0 +1,46 @@
+// Mixins
+@mixin blind {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0);
+}
+
+@mixin focus-ring {
+	outline: 1px dotted #7f7f7f;
+	outline: -webkit-focus-ring-color auto 1px;
+}
+
+@mixin clearfix {
+	content: '';
+	display: block;
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+}
+
+@mixin placeholder {
+	color: inherit;
+	opacity: .5;
+}
+
+@mixin ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+@mixin ellipsis-multiline($line-clamp-val) {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line-clamp-val;
+	// max-height: ;
+	// line-height: ;
+}

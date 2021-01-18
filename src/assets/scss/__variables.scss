@@ -1,0 +1,39 @@
+// Variables
+// 
+// Configuration
+$root-font-size: 16px;
+$viewport-width: 1920px;
+
+// @function pxto-rem($size) {
+// 	$rem: ();
+// 	@if ($size == 1px) or ($size == -1px) {	// 1px은 예외
+// 		$rem: 1px;
+// 	} @else {
+// 		$rem: $size / $root-font-size * 1rem;
+// 	}
+// 	@return $rem;
+// }
+
+@function vw($size) {
+	@return $size / ($viewport-width * 0.01) * 1vw;
+}
+
+// font
+$font-base: 'Noto Sans KR', Sans-serif;
+$font-verdana: Verdana, $font-base;
+
+$fw-normal: 400;
+$fw-light: 300;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-normal: rem(16px);
+$fs-x-small: rem(12px);
+$fs-small: rem(14px);
+$fs-large: rem(18px);
+$fs-x-large: rem(20px);
+
+$fc-normal: #333;
+
+// backgroundColor
+$bgcolor-base: #f9f9f9;

@@ -1,0 +1,34 @@
+// Components
+/* icon */
+%ico-gulp-size {
+	width: rem(64px);
+	height: rem(64px);
+}
+.ico-gulp-img {
+	@extend %ico-gulp-size;
+}
+.ico-gulp-bg {
+	@extend %ico-gulp-size;
+	display: inline-block;
+	background: url('/assets/images/@gulp.png') no-repeat 0 0;
+	background-size: 100%;
+	animation: animate-gulp 1s linear infinite alternate;
+}
+@keyframes animate-gulp {
+	0% {
+		opacity: .6; 
+		filter: blur(2px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+/* button */
+button.clickme {
+	padding: rem(4px 16px);
+	background: #cf4647;
+	border-radius: rem(16px);
+	color: #fff;
+}

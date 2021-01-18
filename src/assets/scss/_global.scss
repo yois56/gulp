@@ -1,0 +1,227 @@
+// Global Style
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;700;900&display=swap');
+
+/* Reset */
+* {
+	padding: 0;
+	margin: 0;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html {
+	font-size: $root-font-size;
+}
+body {
+	font-family: $font-base;
+	font-style: normal;
+	line-height: 1.4;
+	color: $fc-normal;
+	letter-spacing: -1px;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(#000, 0);
+}
+input, select, textarea {
+	vertical-align: middle;
+	line-height: normal;
+	color: inherit;
+	font: inherit;
+}
+input[readonly], input[disabled],
+button[disabled],
+.disabled {
+	cursor: default;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+}
+input::-ms-clear, input::-ms-reveal {
+	display: none;
+}
+input::-webkit-search-cancel-button {
+	appearance: none;
+}
+input::-webkit-clear-button, input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+	display: none;
+	appearance: none;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+	padding: 0;
+}
+::-webkit-input-placeholder {@include placeholder;}
+::-moz-placeholder {@include placeholder;}
+:-ms-input-placeholder {@include placeholder;}
+textarea {
+	resize: none;
+}
+button {
+	overflow: visible;
+	border: 0;
+	border-radius: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	 border: 0;
+	 padding: 0;
+	}
+label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+em, address {
+	font-style: normal;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border: 0;
+	border-spacing: 0;
+}
+img, fieldset {
+	border: 0;
+}
+img {
+	max-width: 100%;
+}
+caption {
+	height: 0;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+legend {
+	position: absolute;
+	height: 0;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+hr {
+	margin: 0;
+	border: 0;
+}
+main {
+	display: block;
+}
+
+/* accessibility */
+#skipnav a {
+	display: block;
+	position: absolute;
+	z-index: 99999;
+	top: 0;
+	left: -9999px;
+	width: 100%;
+	padding: 10px 0;
+	background-color: #000;
+	background-color: rgba(#000, .8);
+	text-align: center;
+	color: #fff;
+
+	&:focus {
+		left: 0;
+	}
+}
+.blind {
+	@include blind;
+
+	//* for iOS VoiceOver
+	// &:before {
+	// 	content: '\00a0';
+	// 	display: block;
+	// 	width: 0;
+	// 	height: 0;
+	// 	font-size: 0;
+	// }
+}
+// label.blind:before {
+// 	content: none;
+// }
+.focusring {
+	@include focus-ring;
+}
+
+/* display */
+.dnone	 {display: none !important;}
+.dblock	 {display: block !important;}
+.dinline {display: inline-block !important;}
+
+/* margin & padding */
+.mg0	{margin: 0 !important;}
+.mgt0	{margin-top: 0 !important;}
+.mgr0	{margin-right: 0 !important;}
+.mgb0	{margin-bottom: 0 !important;}
+.mgl0	{margin-left: 0 !important;}
+.pd0	{padding: 0 !important;}
+.pdt0 	{padding-top: 0 !important;}
+
+/* font */
+.fw-normal	{font-weight: $fw-normal !important;}
+.fw-light	{font-weight: $fw-light !important;}
+.fw-medium	{font-weight: $fw-medium !important;}
+.fw-bold	{font-weight: $fw-bold !important;}
+.fs-normal	{font-size: $fs-normal !important;}
+.fs-x-small	{font-size: $fs-x-small !important;}
+.fs-small	{font-size: $fs-small !important;}
+.fs-large	{font-size: $fs-large !important;}
+.fs-x-large	{font-size: $fs-x-large !important;}
+.underline {text-decoration: underline !important;}
+
+/* color */
+.fc-normal {color: $fc-normal !important;}
+
+/* float */
+.fleft	{float: left !important;}
+.fright	{float: right !important;}
+.fnone	{float: none !important;}
+.clearfix:after {@include clearfix;}
+
+/* align */
+.left	{text-align: left !important;}
+.right	{text-align: right !important;}
+.center	{text-align: center !important;}
+.top	{vertical-align: top !important;}
+.middle	{vertical-align: middle !important;}
+.bottom	{vertical-align: bottom !important;}
+
+/* background & border */
+.bgnone	{background: none !important;}
+.bdnone	{border: none !important;}
+.btnone	{border-top: none !important;}
+.bbnone	{border-bottom: none !important;}
+.blnone	{border-left: none !important;}
+.brnone	{border-right: none !important;}
+
+/* scroll */
+.scroll {
+	overflow: auto;
+}
+.scroll-y {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.scroll-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+/* ellipsis */
+.ellipsis {
+	@include ellipsis;
+}
+.nowrap {
+	white-space: nowrap;
+}

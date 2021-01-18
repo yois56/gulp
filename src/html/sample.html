@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@@include('_include/common_head.html', {
+	'page-title': '샘플페이지'
+})
+</head>
+<body>
+	<div id="wrap">
+		@@include('_include/header.html')
+
+		<!-- Contents Area -->
+		<main id="contents">
+			<p>Gulp test</p><br>
+			<img src="/assets/images/@gulp.png" alt="" class="ico-gulp-img">
+			<span class="ico-gulp-bg"></span>
+
+			<div>
+				<button type="button" class="clickme">Click Me!</button>
+				<span class="fs-small" style="color:#cf4647;"></span>
+			</div>
+			
+		</main>
+		<!-- //Contents Area -->
+
+		@@include('_include/footer.html')
+	</div>
+</body>
+</html>
